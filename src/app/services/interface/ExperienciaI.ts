@@ -8,3 +8,4 @@ export interface ExperienciaI {
     url_logo_empresa: String;   
     id_persona: number;
 }
+

@@ -3,21 +3,25 @@
 
 <div class="section" id="skill">
     <div class="container">
+        <!-- titulo seccion y boton agregar -->
         <div class="sbsc">
         <div class=" left h4 text-center mb-4 title">Skills</div>
         <app-btn-agregar class="right"*ngIf="$estado" (click)="msgBack('Agregar',[])" class="d-flex align-items-center"></app-btn-agregar>
         </div>
         
+        <!-- cuerpo de cada item -->
         <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6" *ngFor="let item of data">
                         <div class="progress-container progress-primary">
+                            <!-- titulo y botones editar / borrar item -->
                             <div class="sbs">
                             <span class=" left progress-badge">{{item.nombre}}</span>
                             <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)" class="d-flex align-items-center"></app-btn-editar>
                             <app-btn-eliminar class="right"*ngIf="$estado" (click)="msgBack('Eliminar',item)" class="d-flex align-items-center"></app-btn-eliminar>
                             </div>
+                            <!-- info de item -->
                             <div class="progress">
                                 <div class="progress-bar progress-bar-primary" data-aos="progress-full"
                                     data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60"
