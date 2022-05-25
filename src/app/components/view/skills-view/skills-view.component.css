@@ -1,0 +1,20 @@
+/* CLASES PARA UBICAR BOTONES Y HEADERS EN LA MISMA LINEA */
+/* side by side (sbs) y side by side centered (sbsc) */
+/* left y right son las ubicaciones del elemento */
+
+.sbsc {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .sbs {
+    display: flex;
+    position: relative;
+  }
+.left {
+    text-align: left;
+  }
+.right {
+    position: left;
+ 
+  }
