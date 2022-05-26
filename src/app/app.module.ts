@@ -11,18 +11,18 @@ import { AboutComponent } from './components/about/about.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
 
 
-import { ProyectosComponent } from './components/proyectos/proyectos.component';
+
 import { BannerComponent } from './components/banner/banner.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 
-import { NgxScrollTopModule } from 'ngx-scrolltop';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { DeletebuttonComponent } from './components/deletebutton/deletebutton.component';
 import { EditbuttonComponent } from './components/editbutton/editbutton.component';
 import { AddbuttonComponent } from './components/addbutton/addbutton.component';
 
-import { ProyectoModalComponent } from './components/modales/proyecto-modal/proyecto-modal.component';
+
 
 import { AboutModalComponent } from './components/modales/about-modal/about-modal.component';
 import { PagErrorComponent } from './components/pag-error/pag-error.component';
@@ -35,6 +35,7 @@ import { ControlModule } from './components/control/control.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,7 @@ import { ControlModule } from './components/control/control.module';
     ProfileComponent,
     SocialLinkComponent,
 
-    ProyectosComponent,
+
     BannerComponent,
 
     FooterComponent,
@@ -54,12 +55,13 @@ import { ControlModule } from './components/control/control.module';
     AddbuttonComponent,
 
 
-    ProyectoModalComponent,
+
 
     AboutModalComponent,
     PagErrorComponent,
     ProfileModalComponent,
-    IniciarSesionComponent
+    IniciarSesionComponent,
+   
     
   ],
   imports: [
@@ -67,7 +69,7 @@ import { ControlModule } from './components/control/control.module';
     HttpClientModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({"responsive": true}),
-    NgxScrollTopModule,
+ 
     ReactiveFormsModule,
 
 
@@ -80,6 +82,6 @@ import { ControlModule } from './components/control/control.module';
     multi: true
   }],
   bootstrap: [AppComponent],
-  entryComponents: [ProyectoModalComponent,  AboutModalComponent, ProfileModalComponent] //habilia al componente para que se pueda usar en un modal
+  entryComponents: [AboutModalComponent, ProfileModalComponent] //habilia al componente para que se pueda usar en un modal
 })
 export class AppModule { }

@@ -7,113 +7,113 @@ var navbar_initialized,
     backgroundOrange = false,
     toggle_initialized = false;
 
-$(document).ready(function() {
-    //  Activate the Tooltips
-    $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
+// $(document).ready(function() {
+//     //  Activate the Tooltips
+//     $('[data-toggle="tooltip"], [rel="tooltip"]').tooltip();
 
-    // Activate Popovers and set color for popovers
-    $('[data-toggle="popover"]').each(function() {
-        color_class = $(this).data('color');
-        $(this).popover({
-            template: '<div class="popover popover-' + color_class + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
-        });
-    });
+//     // Activate Popovers and set color for popovers
+//     $('[data-toggle="popover"]').each(function() {
+//         color_class = $(this).data('color');
+//         $(this).popover({
+//             template: '<div class="popover popover-' + color_class + '" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>'
+//         });
+//     });
 
-    // Activate the image for the navbar-collapse
-    nowuiKit.initNavbarImage();
+//     // Activate the image for the navbar-collapse
+//     nowuiKit.initNavbarImage();
 
-    $navbar = $('.navbar[color-on-scroll]');
-    scroll_distance = $navbar.attr('color-on-scroll') || 500;
+//     $navbar = $('.navbar[color-on-scroll]');
+//     scroll_distance = $navbar.attr('color-on-scroll') || 500;
 
-    // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
+//     // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
 
-    if ($('.navbar[color-on-scroll]').length != 0) {
-        nowuiKit.checkScrollForTransparentNavbar();
-        $(window).on('scroll', nowuiKit.checkScrollForTransparentNavbar)
-    }
+//     if ($('.navbar[color-on-scroll]').length != 0) {
+//         nowuiKit.checkScrollForTransparentNavbar();
+//         $(window).on('scroll', nowuiKit.checkScrollForTransparentNavbar)
+//     }
 
-    $('.form-control').on("focus", function() {
-        $(this).parent('.input-group').addClass("input-group-focus");
-    }).on("blur", function() {
-        $(this).parent(".input-group").removeClass("input-group-focus");
-    });
+//     $('.form-control').on("focus", function() {
+//         $(this).parent('.input-group').addClass("input-group-focus");
+//     }).on("blur", function() {
+//         $(this).parent(".input-group").removeClass("input-group-focus");
+//     });
 
-    // Activate bootstrapSwitch
-    $('.bootstrap-switch').each(function() {
-        $this = $(this);
-        data_on_label = $this.data('on-label') || '';
-        data_off_label = $this.data('off-label') || '';
+//     // Activate bootstrapSwitch
+//     $('.bootstrap-switch').each(function() {
+//         $this = $(this);
+//         data_on_label = $this.data('on-label') || '';
+//         data_off_label = $this.data('off-label') || '';
 
-        $this.bootstrapSwitch({
-            onText: data_on_label,
-            offText: data_off_label
-        });
-    });
+//         $this.bootstrapSwitch({
+//             onText: data_on_label,
+//             offText: data_off_label
+//         });
+//     });
 
-    if ($(window).width() >= 992) {
-        big_image = $('.page-header-image[data-parallax="true"]');
+//     if ($(window).width() >= 992) {
+//         big_image = $('.page-header-image[data-parallax="true"]');
 
-        $(window).on('scroll', nowuiKitDemo.checkScrollForParallax);
-    }
+//         $(window).on('scroll', nowuiKitDemo.checkScrollForParallax);
+//     }
 
-    // Activate Carousel
-    $('.carousel').carousel({
-        interval: 4000
-    });
+//     // Activate Carousel
+//     $('.carousel').carousel({
+//         interval: 4000
+//     });
 
-    $('.date-picker').each(function() {
-        $(this).datepicker({
-            templates: {
-                leftArrow: '<i class="now-ui-icons arrows-1_minimal-left"></i>',
-                rightArrow: '<i class="now-ui-icons arrows-1_minimal-right"></i>'
-            }
-        }).on('show', function() {
-            $('.datepicker').addClass('open');
+//     $('.date-picker').each(function() {
+//         $(this).datepicker({
+//             templates: {
+//                 leftArrow: '<i class="now-ui-icons arrows-1_minimal-left"></i>',
+//                 rightArrow: '<i class="now-ui-icons arrows-1_minimal-right"></i>'
+//             }
+//         }).on('show', function() {
+//             $('.datepicker').addClass('open');
 
-            datepicker_color = $(this).data('datepicker-color');
-            if (datepicker_color.length != 0) {
-                $('.datepicker').addClass('datepicker-' + datepicker_color + '');
-            }
-        }).on('hide', function() {
-            $('.datepicker').removeClass('open');
-        });
-    });
+//             datepicker_color = $(this).data('datepicker-color');
+//             if (datepicker_color.length != 0) {
+//                 $('.datepicker').addClass('datepicker-' + datepicker_color + '');
+//             }
+//         }).on('hide', function() {
+//             $('.datepicker').removeClass('open');
+//         });
+//     });
 
 
-});
+// });
 
-$(window).on('resize', function() {
-    nowuiKit.initNavbarImage();
-});
+// $(window).on('resize', function() {
+//     nowuiKit.initNavbarImage();
+// });
 
-$(document).on('click', '.navbar-toggler', function() {
-    $toggle = $(this);
+// $(document).on('click', '.navbar-toggler', function() {
+//     $toggle = $(this);
 
-    if (nowuiKit.misc.navbar_menu_visible == 1) {
-        $('html').removeClass('nav-open');
-        nowuiKit.misc.navbar_menu_visible = 0;
-        $('#bodyClick').remove();
-        setTimeout(function() {
-            $toggle.removeClass('toggled');
-        }, 550);
-    } else {
-        setTimeout(function() {
-            $toggle.addClass('toggled');
-        }, 580);
-        div = '<div id="bodyClick"></div>';
-        $(div).appendTo('body').click(function() {
-            $('html').removeClass('nav-open');
-            nowuiKit.misc.navbar_menu_visible = 0;
-            setTimeout(function() {
-                $toggle.removeClass('toggled');
-                $('#bodyClick').remove();
-            }, 550);
-        });
+//     if (nowuiKit.misc.navbar_menu_visible == 1) {
+//         $('html').removeClass('nav-open');
+//         nowuiKit.misc.navbar_menu_visible = 0;
+//         $('#bodyClick').remove();
+//         setTimeout(function() {
+//             $toggle.removeClass('toggled');
+//         }, 550);
+//     } else {
+//         setTimeout(function() {
+//             $toggle.addClass('toggled');
+//         }, 580);
+//         div = '<div id="bodyClick"></div>';
+//         $(div).appendTo('body').click(function() {
+//             $('html').removeClass('nav-open');
+//             nowuiKit.misc.navbar_menu_visible = 0;
+//             setTimeout(function() {
+//                 $toggle.removeClass('toggled');
+//                 $('#bodyClick').remove();
+//             }, 550);
+//         });
 
-        $('html').addClass('nav-open');
-        nowuiKit.misc.navbar_menu_visible = 1;
-    }
-});
+//         $('html').addClass('nav-open');
+//         nowuiKit.misc.navbar_menu_visible = 1;
+//     }
+// });
 
 nowuiKit = {
     misc: {
