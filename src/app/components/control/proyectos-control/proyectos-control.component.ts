@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginService } from 'src/app/services/api-rest/login.service';
-
-
-
 import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
-import { SkillsFormComponent } from '../../forms/skills-form/skills-form.component';
+import { ProyectosFormComponent } from '../../forms/proyectos-form/proyectos-form.component';
 
 @Component({
-  selector: 'app-skills-control',
+  selector: 'app-proyectos-control',
   template: `
 
-  <app-skills-view [data]=data 
+
+<app-proyectos-view [data]=data 
                 [$estado]=$estado   
-                (newItemEvent)="getMsg($event)"
-  ></app-skills-view>
+                (newItemEvent)="getMsg($event)"></app-proyectos-view>
+
+
   
               `,
   
@@ -24,14 +23,12 @@ import { SkillsFormComponent } from '../../forms/skills-form/skills-form.compone
     `
     ]
 })
+export class ProyectosControlComponent implements OnInit {
 
-
-export class SkillsControlComponent implements OnInit {
-
- 
+  
   data!: [];
   $estado!: boolean;
-  componente: string = 'skills'
+  componente: string = 'proyectos'
 
   constructor(private modalService: NgbModal,
     private loginService: LoginService,
@@ -60,7 +57,7 @@ export class SkillsControlComponent implements OnInit {
 
   openForm(modo: string, item: any) {
     {
-      const modalRef = this.modalService.open(SkillsFormComponent,
+      const modalRef = this.modalService.open(ProyectosFormComponent,
         {
           // scrollable: false,
           windowClass: 'myCustomModalClass',
@@ -102,10 +99,7 @@ export class SkillsControlComponent implements OnInit {
         this.deleteItem(this.componente, item);
         break;
       }
-      // case 'Eliminar': {
-      //   this.delete( item.id_skill);
-      //   break;
-      // }
+
 
     
 
@@ -132,8 +126,8 @@ export class SkillsControlComponent implements OnInit {
 
 
   deleteItem(componente: string, item: any): void {
-    console.log("delete component", item, item.id_skill)
-    this.servicioDatosService.deleteItem(componente, item.id_skill)
+    console.log("delete component", item, item.id_proyecto)
+    this.servicioDatosService.deleteItem(componente, item.id_proyecto)
     .subscribe 
     (data => { 
       this.data = data; 
@@ -158,7 +152,7 @@ export class SkillsControlComponent implements OnInit {
 
   updateItem(componente: string, item: any): void {
    
-    this.servicioDatosService.updateItem(componente, item, item.id_skill)
+    this.servicioDatosService.updateItem(componente, item, item.id_proyecto)
     .subscribe
     (data => { 
       this.data = data; 

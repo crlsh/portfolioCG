@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExperienciaModalComponent } from './experiencia-modal.component';
+import { ProyectosFormComponent } from './proyectos-form.component';
 
-describe('ExperiencaModalComponent', () => {
-  let component: ExperienciaModalComponent;
-  let fixture: ComponentFixture<ExperienciaModalComponent>;
+describe('ProyectosFormComponent', () => {
+  let component: ProyectosFormComponent;
+  let fixture: ComponentFixture<ProyectosFormComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ExperienciaModalComponent ]
+      declarations: [ ProyectosFormComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ExperienciaModalComponent);
+    fixture = TestBed.createComponent(ProyectosFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

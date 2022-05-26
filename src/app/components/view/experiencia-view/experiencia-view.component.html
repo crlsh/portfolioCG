@@ -1,52 +1,13 @@
-<div class="sbsc">
-    <div class=" left h4 text-center mb-4 title">Skills</div>
-    <app-btn-agregar class="right" *ngIf="$estado" (click)="msgBack('Agregar',[])" class="d-flex align-items-center">
-    </app-btn-agregar>
-</div>
-
-
-<!-- Rellenar Tarjetas con Info de cada item  -->
-
-
-<div *ngFor="let item of data">
-
-    <div class="card">
-
-        <div class="card-horizontal">
-            <div class="img-square-wrapper col align-self-center">
-                <img class="" src="http://via.placeholder.com/140x100" alt="Card image cap">
-            </div>
-
-            <div class="card-body">
-                <h3 class="card-title">{{item.empresa}}</h3>
-                <h4>{{item.puesto}} - {{item.ingreso}} - {{item.egreso}}</h4>
-                <p class="card-text"> {{item.descripcion}} </p>
-            </div>
-
-            <div *ngIf="$estado | async" class="card-footer">
-
-
-
-
-                <app-btn-editar (click)="msgBack('Editar', item)"></app-btn-editar>
-
-                <app-btn-eliminar (click)="msgBack('Eliminar', item)">X</app-btn-eliminar>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-
-<div class="section" id="experience">
+<div class="section" id="experiencia">
     <div class="container py-2 cc-experience">
         <div class="sbsc">
             <div class="left h4 text-center mb-4 title">Experiencia Laboral
 
             </div>
-            <app-btn-agregar class="right"*ngIf="$estado" (click)="msgBack('Agregar',[])" class="d-flex align-items-center"></app-btn-agregar>
-            </div>
- 
+            <app-btn-agregar class="right" *ngIf="$estado" (click)="msgBack('Agregar',[])"
+                class="d-flex align-items-center"></app-btn-agregar>
+        </div>
+
         <div class="row">
             <ul class="timeline">
                 <li *ngFor="let item of data">
@@ -56,19 +17,20 @@
                     <div class="timeline-panel">
                         <div class="row">
                             <div class="col-lg-6 ">
-                                                            <!-- titulo y botones editar / borrar item -->
-                            <div class="sbs">
-                                <div class="h5 mt-0 title">{{item.empresa}}</div>
-                                <!-- <span class=" left progress-badge">{{item.nombre}}</span> -->
-                                <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)" class="d-flex align-items-center"></app-btn-editar>
-                                <app-btn-eliminar class="right"*ngIf="$estado" (click)="msgBack('Eliminar',item)" class="d-flex align-items-center"></app-btn-eliminar>
+                                <!-- titulo y botones editar / borrar item -->
+                                <div class="sbs">
+                                    <div class="h5 mt-0 title">{{item.empresa}}</div>
+                                    <!-- <span class=" left progress-badge">{{item.nombre}}</span> -->
+                                    <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)"
+                                        class="d-flex align-items-center"></app-btn-editar>
+                                    <app-btn-eliminar class="right" *ngIf="$estado" (click)="msgBack('Eliminar',item)"
+                                        class="d-flex align-items-center"></app-btn-eliminar>
                                 </div>
-                            
-                                
-                                <div class="h6 mt-0 title">Associate Software Engineer (2010-08 - Present)</div>
-                                <p align="justify">Morgan Stanley mobilizes capital to help governments, corporations,
-                                    institutions and individuals around the world achieve their financial goals.</p>
-                                <p align="justify">Worknig as java developer for Margin team</p>
+
+
+                                <div class="h6 mt-0 title">{{item.puesto}} ({{item.ingreso}}{{item.egreso}})</div>
+                                <p align="justify">{{item.descripcion}}</p>
+
                             </div>
                             <div class="col-lg-6">
                                 <ul>
@@ -100,7 +62,6 @@
                         </div>
                     </div>
                 </li>
-
             </ul>
         </div>
     </div>
