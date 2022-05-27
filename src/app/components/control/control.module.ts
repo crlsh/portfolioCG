@@ -6,6 +6,7 @@ import { FormsModule } from '../forms/forms.module';
 import { ExperienciaControlComponent } from './experiencia-control/experiencia-control.component';
 import { EducacionControlComponent } from './educacion-control/educacion-control.component';
 import { ProyectosControlComponent } from './proyectos-control/proyectos-control.component';
+import { AboutControlComponent } from './about-control/about-control.component';
 
 
 
@@ -14,20 +15,23 @@ import { ProyectosControlComponent } from './proyectos-control/proyectos-control
     SkillsControlComponent,
     ExperienciaControlComponent,
   EducacionControlComponent,
-  ProyectosControlComponent
+  ProyectosControlComponent,
+  AboutControlComponent,
   
   ],
   
   imports: [
     CommonModule, 
     ViewModule,
-    FormsModule
+    FormsModule,
+
   ],
   exports: [
     SkillsControlComponent,
     ExperienciaControlComponent,
     EducacionControlComponent,
-    ProyectosControlComponent
+    ProyectosControlComponent,
+    AboutControlComponent
   ],
 })
 export class ControlModule { }

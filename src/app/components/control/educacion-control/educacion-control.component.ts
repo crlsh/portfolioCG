@@ -99,12 +99,7 @@ export class EducacionControlComponent implements OnInit {
         this.deleteItem(this.componente, item);
         break;
       }
-      // case 'Eliminar': {
-      //   this.delete( item.id_educacion);
-      //   break;
-      // }
-
-    
+     
 
       default: {
         console.log("sin operacion en case crud")
@@ -124,14 +119,6 @@ export class EducacionControlComponent implements OnInit {
   );
   }
 
-//   delete(id: number) {
-//     this.educacionervice.delete(id)
-//     .subscribe
-//     (data => { 
-//       this.data = data; 
-//       this.ngOnInit();
-//     })  
-// }
 
 
 

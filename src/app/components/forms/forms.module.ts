@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ExperienciaFormComponent } from './experiencia-form/experiencia-form.component';
 import { EducacionFormComponent } from './educacion-form/educacion-form.component';
 import { ProyectosFormComponent } from './proyectos-form/proyectos-form.component';
+import { AboutFormComponent } from './about-form/about-form.component';
 
 
 
@@ -14,6 +15,7 @@ import { ProyectosFormComponent } from './proyectos-form/proyectos-form.componen
     ExperienciaFormComponent,
     EducacionFormComponent,
     ProyectosFormComponent,
+    AboutFormComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +26,8 @@ import { ProyectosFormComponent } from './proyectos-form/proyectos-form.componen
     ExperienciaFormComponent,
     SkillsFormComponent,
     EducacionFormComponent,
-    ProyectosFormComponent
+    ProyectosFormComponent,
+    AboutFormComponent,
   ],
 })
 export class FormsModule { }
