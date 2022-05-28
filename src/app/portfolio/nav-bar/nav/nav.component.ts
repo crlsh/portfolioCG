@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AutenticationService } from 'src/app/services/api-rest/autentication.service';
 import { LoginService } from 'src/app/services/api-rest/login.service';
 import { RedesService } from 'src/app/services/api-rest/redes.service';
-import { Redes } from 'src/app/services/interface/Redes';
+import { Redes } from 'src/app/models/Redes';
 
 
 @Component({

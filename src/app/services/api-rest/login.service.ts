@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Persona } from '../interface/Persona';
+import { Persona } from '../../models/Persona';
 
 @Injectable({
   providedIn: 'root'

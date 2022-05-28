@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { IniciarSesionComponent } from './components/nav-bar/iniciar-sesion/iniciar-sesion.component';
-import { PagErrorComponent } from './components/pag-error/pag-error.component';
+import { HomeComponent } from './portfolio/home/home.component';
+import { IniciarSesionComponent } from './portfolio/nav-bar/iniciar-sesion/iniciar-sesion.component';
+import { PagErrorComponent } from './portfolio/pag-error/pag-error.component';
 
 
 

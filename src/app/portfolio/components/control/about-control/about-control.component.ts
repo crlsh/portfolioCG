@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginService } from 'src/app/services/api-rest/login.service';
-import { Persona } from 'src/app/services/interface/Persona';
+import { Persona } from 'src/app/models/Persona';
 import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
 import { AboutFormComponent } from '../../forms/about-form/about-form.component';
 

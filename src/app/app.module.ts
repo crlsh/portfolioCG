@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav-bar/nav/nav.component';
-import { SocialLinkComponent } from './components/social-link/social-link.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/home/home.component';
-import { PagErrorComponent } from './components/pag-error/pag-error.component';
+import { NavComponent } from './portfolio/nav-bar/nav/nav.component';
+import { SocialLinkComponent } from './portfolio/components/social-link/social-link.component';
+import { FooterComponent } from './portfolio/footer/footer.component';
+import { HomeComponent } from './portfolio/home/home.component';
+import { PagErrorComponent } from './portfolio/pag-error/pag-error.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { IniciarSesionComponent } from './components/nav-bar/iniciar-sesion/iniciar-sesion.component';
+import { IniciarSesionComponent } from './portfolio/nav-bar/iniciar-sesion/iniciar-sesion.component';
 import { InterceptorService } from './services/api-rest/interceptor.service';
-import { ControlModule } from './components/control/control.module';
-import { LoginButtonsComponent } from './components/nav-bar/login-buttons/login-buttons.component';
+import { ControlModule } from './portfolio/components/control/control.module';
+import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
 
 
 

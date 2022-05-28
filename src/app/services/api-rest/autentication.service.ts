@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
-import { User } from '../interface/user';
+import { User } from '../../models/user';
 import { LoginService } from './login.service';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { LoginService } from './login.service';
 export class AutenticationService {
 
 
-  // url2='http://localhost:8080/api/login':
+
   url2='https://apiportfolio-cg.herokuapp.com/api/login';
 
   user: User = { username: "", password: "", token: "" } ;

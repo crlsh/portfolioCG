@@ -6,21 +6,22 @@
 
             <div class="page-header page-header-small">
                 <div class="page-header-image" data-parallax="true"
-
                     style="background-image: url('https://i.ibb.co/6ZKzBHb/banner-keyboard.png');">
-                    
+
                 </div>
 
-                <!-- IMAGEN PERSONAL -->
-
-                <img class="image rounded-circle mt-n2 entry-content" [src]="persona?.url_img_perfil" id="profile-img"
-                    alt="Foto de perfil ">
-
-                <!-- NOMBRE TITULO INTRO -->
-
                 <div class="container">
-                    <div class="content-center">
 
+                    <!-- IMAGEN PERSONAL -->
+                    <div class="content-center">
+                        <div class="profile-image">
+                            <a href="#">
+                                <img [src]="persona?.url_img_perfil" alt="Image" />
+                            </a>
+                        </div>
+
+
+                        <!-- NOMBRE TITULO INTRO -->
 
                         <div class="sbsc">
                             <h2>{{persona?.nombre}} {{persona?.apellido}} </h2>
@@ -30,11 +31,11 @@
                         <p class="category text-white">{{persona?.titulo}}</p>
                         <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
                             data-aos-anchor="data-aos-anchor">CONTACTO</a>
-                               <!-- link a mail google drive -->
-                            <a class="btn btn-primary"
-                            href="" 
-                     
-                            target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">DESCARGAR CV</a>
+                        <!-- link a mail google drive -->
+                        <a class="btn btn-primary" href="" target="_blank" data-aos="zoom-in"
+                            data-aos-anchor="data-aos-anchor">DESCARGAR CV</a>
+
+           
                     </div>
                 </div>
 
@@ -43,27 +44,24 @@
                 <div class="section">
                     <div class="container">
                         <div class="button-container">
-                            <a class="btn btn-default btn-round btn-lg btn-icon"
-                                href="" target="_blank" rel="tooltip"
+                            <a class="btn btn-default btn-round btn-lg btn-icon" href="" target="_blank" rel="tooltip"
                                 title="Follow me on Facebook">
                                 <i class="fa fa-facebook"></i>
                             </a>
-                            <a class="btn btn-default btn-round btn-lg btn-icon"
-                                href="" target="_blank" rel="tooltip"
+                            <a class="btn btn-default btn-round btn-lg btn-icon" href="" target="_blank" rel="tooltip"
                                 title="Follow me on Instagram">
                                 <i class="fa fa-instagram"></i>
                             </a>
-                            <a class="btn btn-default btn-round btn-lg btn-icon"
-                                href="" target="_blank" rel="tooltip"
+                            <a class="btn btn-default btn-round btn-lg btn-icon" href="" target="_blank" rel="tooltip"
                                 title="Follow me on Linkedin">
                                 <i class="fa fa-linkedin"></i>
                             </a>
-                            <a class="btn btn-default btn-round btn-lg btn-icon" href=""
-                                target="_blank" rel="tooltip" title="Follow me on Github">
+                            <a class="btn btn-default btn-round btn-lg btn-icon" href="" target="_blank" rel="tooltip"
+                                title="Follow me on Github">
                                 <i class="fa fa-github"></i>
                             </a>
-                            <a class="btn btn-default btn-round btn-lg btn-icon" href=""
-                                target="_blank" rel="tooltip" title="Follow me on Twitter">
+                            <a class="btn btn-default btn-round btn-lg btn-icon" href="" target="_blank" rel="tooltip"
+                                title="Follow me on Twitter">
                                 <i class="fa fa-twitter"></i>
                             </a>
                             <a class="btn btn-default btn-round btn-lg btn-icon" href="#" target="_blank" rel="tooltip"

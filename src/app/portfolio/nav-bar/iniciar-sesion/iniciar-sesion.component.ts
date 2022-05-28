@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/api-rest/user.service';
-import { Persona } from 'src/app/services/interface/Persona';
+import { Persona } from 'src/app/models/Persona';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'; //importar para los formularios reactivos
 import { AutenticationService } from 'src/app/services/api-rest/autentication.service';
 

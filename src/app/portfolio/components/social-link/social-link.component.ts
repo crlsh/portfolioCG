@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Redes } from 'src/app/services/interface/Redes';
+import { Redes } from 'src/app/models/Redes';
 
 @Component({
   selector: 'app-social-link',
