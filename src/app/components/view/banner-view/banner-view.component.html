@@ -1,63 +1,73 @@
-<div class="profile-page">
+<div class='profile-page' id='inicio'>
     <div class="wrapper">
-        <div class="page-header page-header-small" filter-color="black">
-
+        <div class="page-header page-header-small">
 
             <!-- IMAGEN DE FONDO -->
-            <div class="page-header-image" data-parallax="true" style.background-image="url('{{persona.url_img_fondo')">
-            </div>
-            <div class="container">
-                <div class="content-center">
 
-                    
-        <div class="sbsc">
-            <h2>{{persona?.nombre}}  {{persona?.apellido}} </h2>
-            <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Banner',persona)"
-            class="d-flex align-items-center"></app-btn-editar>
-        </div>
-                    <p class="category text-white">{{persona?.titulo}}</p>
-                    <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
-                        data-aos-anchor="data-aos-anchor">Hire Me</a>
-                    <a class="btn btn-primary"
-                        href="https://drive.google.com/file/d/1Bngz7t8l_RAtwVmtHjnPe6CIoFWK9AfY/view?usp=sharing"
-                        target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Download CV</a>
+            <div class="page-header page-header-small">
+                <div class="page-header-image" data-parallax="true"
+                    style="background-image: url('https://i.ibb.co/6ZKzBHb/banner-keyboard.png');">
                 </div>
-            </div>
 
+                <!-- IMAGEN PERSONAL -->
 
-            <!-- REDES SOCIALES -->
-            <div class="section">
+                <img class="image rounded-circle mt-n2 entry-content" [src]="persona?.url_img_perfil" id="profile-img"
+                    alt="Foto de perfil ">
+
+                <!-- NOMBRE TITULO INTRO -->
+
                 <div class="container">
-                    <div class="button-container">
+                    <div class="content-center">
 
 
-                        <a class="btn btn-default btn-round btn-lg " href="https://www.facebook.com/roaring.raaj/"
-                            target="_blank" rel="tooltip" title="Follow me on Facebook">
-                            <i class="bi bi-facebook" style="font: size 36px"></i>
-                        </a>
-                        <a class="btn btn-default btn-round btn-lg " href="https://www.instagram.com/roaring_raaj/"
-                            target="_blank" rel="tooltip" title="Follow me on Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
-                        <a class="btn btn-default btn-round btn-lg" href="https://www.linkedin.com/in/roaring-raaj"
-                            target="_blank" rel="tooltip" title="Follow me on Linkedin">
-                            <i class="bi bi-linkedin"></i>
-                        </a>
-                        <a class="btn btn-default btn-round btn-lg " href="https://github.com/Punithraaj"
-                            target="_blank" rel="tooltip" title="Follow me on Github">
-                            <i class="bi bi-github"></i>
-                        </a>
-                        <a class="btn btn-default btn-round btn-lg " href="https://twitter.com/roaringraaj"
-                            target="_blank" rel="tooltip" title="Follow me on Twitter">
-                            <i class="bi bi-twitter"></i>
-                        </a>
-                        <a class="btn btn-default btn-round btn-lg " href="#" target="_blank" rel="tooltip"
-                            title="Follow me on Google+">
-                            <i class="bi bi-google-plus"></i>
-                        </a>
+                        <div class="sbsc">
+                            <h2>{{persona?.nombre}} {{persona?.apellido}} </h2>
+                            <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Banner',persona)"
+                                class="d-flex align-items-center"></app-btn-editar>
+                        </div>
+                        <p class="category text-white">{{persona?.titulo}}</p>
+                        <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in"
+                            data-aos-anchor="data-aos-anchor">CONTACTO</a>
+                        <a class="btn btn-primary"
+                            href="https://drive.google.com/file/d/1Bngz7t8l_RAtwVmtHjnPe6CIoFWK9AfY/view?usp=sharing"
+                            target="_blank" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">DESCARGAR CV</a>
+                    </div>
+                </div>
+
+
+                <!-- REDES SOCIALES -->
+                <div class="section">
+                    <div class="container">
+                        <div class="button-container">
+
+
+                            <a class="btn btn-default btn-round btn-lg " href="https://www.facebook.com/roaring.raaj/"
+                                target="_blank" rel="tooltip" title="Follow me on Facebook">
+                                <i class="bi bi-facebook" style="font: size 36px"></i>
+                            </a>
+                            <a class="btn btn-default btn-round btn-lg " href="https://www.instagram.com/roaring_raaj/"
+                                target="_blank" rel="tooltip" title="Follow me on Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a class="btn btn-default btn-round btn-lg" href="https://www.linkedin.com/in/roaring-raaj"
+                                target="_blank" rel="tooltip" title="Follow me on Linkedin">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a class="btn btn-default btn-round btn-lg " href="https://github.com/Punithraaj"
+                                target="_blank" rel="tooltip" title="Follow me on Github">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a class="btn btn-default btn-round btn-lg " href="https://twitter.com/roaringraaj"
+                                target="_blank" rel="tooltip" title="Follow me on Twitter">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a class="btn btn-default btn-round btn-lg " href="#" target="_blank" rel="tooltip"
+                                title="Follow me on Google+">
+                                <i class="bi bi-google-plus"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

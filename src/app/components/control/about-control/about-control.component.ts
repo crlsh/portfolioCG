@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LoginService } from 'src/app/services/api-rest/login.service';
+import { Persona } from 'src/app/services/interface/Persona';
 import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
 import { AboutFormComponent } from '../../forms/about-form/about-form.component';
 
@@ -9,22 +10,26 @@ import { AboutFormComponent } from '../../forms/about-form/about-form.component'
 @Component({
   selector: 'app-about-control',
   template: `
+<div>
 
+              
 <app-banner-view [persona]=persona 
                 [$estado]=$estado   
                 (newItemEvent)="getMsg($event)"
   ></app-banner-view>
 
-
   <app-about-view [persona]=persona 
                 [$estado]=$estado   
                 (newItemEvent)="getMsg($event)"
   ></app-about-view>
+
+</div>
   
               `,
 
   styles: [
     `
+
 
     `
   ]
@@ -33,7 +38,7 @@ export class AboutControlComponent implements OnInit {
 
 
   id_persona: number = 1; //prefijado hasta implementar registro de nuevos usuarios
-  persona!: [];
+  persona!: Persona;
   $estado!: boolean;
   componente: string = 'personas'
 

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  HostListener,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutenticationService } from 'src/app/services/api-rest/autentication.service';
 import { LoginService } from 'src/app/services/api-rest/login.service';
 import { RedesService } from 'src/app/services/api-rest/redes.service';
 import { Redes } from 'src/app/services/interface/Redes';
+
 
 @Component({
   selector: 'app-nav',
@@ -11,10 +12,9 @@ import { Redes } from 'src/app/services/interface/Redes';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  isScrolled = false;
 
-
-
-  login:any;
+  login!:any;
 
   socialLinks!: Redes [] 
 
@@ -33,12 +33,13 @@ export class NavComponent implements OnInit {
     this.autenticationServ.CerrarSesion();
     this.router.navigate(['home']);
   }
-  /*
-  isLoggedIn(): boolean {
 
-    return this.loginService.isLoggedIn();  
+  @HostListener("window:scroll")
+  scrollEvent() {
+    console.log("scrolling")
+    window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
   }
-  */
+
 
   getAll(){
     this.redesService.getAll().subscribe((redes) => {
