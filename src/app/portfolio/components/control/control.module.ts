@@ -7,6 +7,7 @@ import { ExperienciaControlComponent } from './experiencia-control/experiencia-c
 import { EducacionControlComponent } from './educacion-control/educacion-control.component';
 import { ProyectosControlComponent } from './proyectos-control/proyectos-control.component';
 import { AboutControlComponent } from './about-control/about-control.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 
 
@@ -24,6 +25,7 @@ import { AboutControlComponent } from './about-control/about-control.component';
     CommonModule, 
     ViewModule,
     FormsModule,
+    NgxLoadingModule.forRoot({})
 
   ],
   exports: [

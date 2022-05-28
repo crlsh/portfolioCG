@@ -23,6 +23,12 @@ import { AboutFormComponent } from '../../forms/about-form/about-form.component'
                 (newItemEvent)="getMsg($event)"
   ></app-about-view>
 
+  
+
+  <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading> -->
+
+  <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
+  
 </div>
   
               `,
@@ -36,6 +42,7 @@ import { AboutFormComponent } from '../../forms/about-form/about-form.component'
 })
 export class AboutControlComponent implements OnInit {
 
+  public loading:boolean = false;
 
   id_persona: number = 1; //prefijado hasta implementar registro de nuevos usuarios
   persona!: Persona;
@@ -54,6 +61,9 @@ export class AboutControlComponent implements OnInit {
 
   ngOnInit(): void {
 
+    
+   
+    
     // actualizar datos persona prefijada (los metodos estan completos para cuando se implemente creacion de usuarios)
     this.getItem(this.id_persona)
     this.loginService.LogState().subscribe((login) => (this.$estado = login));
@@ -104,8 +114,9 @@ export class AboutControlComponent implements OnInit {
         break;
       }
 
-         // case 'Agregar': {
+    // POR EL MOMENTO NO SE PERMITE AGREGAR PERSONAS
 
+      // case 'Agregar': {
       //   this.addItem(this.componente, item);
       //   break;
       // }
@@ -126,13 +137,19 @@ export class AboutControlComponent implements OnInit {
 
 
   getItem(id: number) {
-    this.servicioDatosService.getItem(this.componente, id).subscribe(
-      data => {
+    this.loading = true;
+    this.servicioDatosService.getItem(this.componente, id)
+    .subscribe(data => {
+        this.loading = false;
         this.persona = data;
         //console.log(this.persona)        
       }
     );
   }
+
+
+
+
 
 
   updateItem(componente: string, item: any): void {

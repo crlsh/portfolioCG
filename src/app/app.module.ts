@@ -13,6 +13,7 @@ import { IniciarSesionComponent } from './portfolio/nav-bar/iniciar-sesion/inici
 import { InterceptorService } from './services/api-rest/interceptor.service';
 import { ControlModule } from './portfolio/components/control/control.module';
 import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
+import { NgxLoadingModule } from 'ngx-loading';
 
 
 
@@ -35,6 +36,7 @@ import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-b
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    NgxLoadingModule.forRoot({}),
     //modulos
     ControlModule
   ],

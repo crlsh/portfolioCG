@@ -12,11 +12,13 @@ import { AutenticationService } from 'src/app/services/api-rest/autentication.se
   styleUrls: ['./iniciar-sesion.component.css']
 })
 export class IniciarSesionComponent implements OnInit {
+ 
+  public loading = false;
   persona!: Persona;
-  formulario: FormGroup; // crear una variable para el formulario... TODO ESTA EN LA MASTERCLASS 8.1
+  formulario: FormGroup; 
 
-  constructor(private router: Router, private userService: UserService, private formBuilder: FormBuilder, private autenticationServ: AutenticationService) { //inyectar formBuilder para los formularios reactivos
-    // crea el formulario con los campos necesarios
+  constructor(private router: Router, private userService: UserService, private formBuilder: FormBuilder, private autenticationServ: AutenticationService) { 
+      
     this.formulario = this.formBuilder.group({
       username: ['', Validators.required], 
       password: ['', Validators.required]
@@ -32,23 +34,13 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //probablemente acá quiera cargar algo...
+   
   }
 
-  loginFalso() {
-    //pedir al post...    
-    this.userService.login("olivia", "1234").subscribe(
-      data => {
-        this.persona = data;
-        //console.log(this.persona);
-        localStorage.setItem("persona", JSON.stringify(this.persona));
-        this.volverAlHome();
-      }
-    );
-  }
+
 
   login() {
-    //pedir al post...    
+    
     this.userService.login( this.formulario.value.username, this.formulario.value.password).subscribe(
       data => {
         this.persona = data;
@@ -64,15 +56,20 @@ export class IniciarSesionComponent implements OnInit {
   }
 
   iniciarSesion() {
-    console.log(this.formulario.value);
+    //console.log(this.formulario.value);
+    this.loading = true
     this.autenticationServ.IniciarSesion(this.formulario.value.username, this.formulario.value.password).subscribe(
       data => {
+        this.loading = false;
        // this.persona = data;
-        console.log(data);
+       // console.log(data);
         //localStorage.setItem("persona", JSON.stringify(this.persona));
         this.volverAlHome();
       }
     );;
   }
+
+
+
 
 }
