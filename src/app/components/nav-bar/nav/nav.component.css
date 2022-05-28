@@ -1,4 +1,4 @@
-nav{
+/* nav{
     background: grey;
   }
 
@@ -8,16 +8,40 @@ nav{
   }
   li:hover{
     color: white;
-  }
-  
-  .fixed{
+  } */
+
+/* .fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
     background: white;
-  }
-  .fixed .nav-item{
+} */
+
+/* .fixed li{
     color: red;
   }
+
+  .fixed li:hover {
+    background-color:#002ead;
+    transition: 0.7s;
+} */
+
+/* nav .navbar-nav li a{
+    color: rgb(96, 136, 181) !important;
+    }
+ */
+
+/* .fixed .navbar-nav {
+    background-color: #ff5500;
+}
+
+.fixed .navbar-nav li a {
+    color: rgb(7, 7, 7) !important;
+} */
+
+/*
+.fixed .navbar-brand i a {
+    color: rgb(7, 7, 7) !important;
+} */

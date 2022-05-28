@@ -8,7 +8,7 @@ import { User } from '../interface/user';
 })
 export class UserService {
 
-    // url2='http://localhost:8080/api'; 
+   
   url2="https://apiportfolio-cg.herokuapp.com/api";
   
   user: User = { username: "", password: "", token: "" };
@@ -23,7 +23,7 @@ export class UserService {
     console.log("login user", this.user);
     return this.http.post(`https://apiportfolio-cg.herokuapp.com/api/login`, this.user);
     
-	  // return this.http.post(`https://portfolio-carlos-gimenez.herokuapp.com/api/login`, this.user);
+	 
     console.log("login user", this.user);
 	}
 

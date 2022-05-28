@@ -35,11 +35,10 @@ export class NavComponent implements OnInit {
   }
 
   @HostListener("window:scroll")
-  scrollEvent() {
-    console.log("scrolling")
-    window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
-  }
 
+  scrollEvent() {
+      window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
+  }
 
   getAll(){
     this.redesService.getAll().subscribe((redes) => {

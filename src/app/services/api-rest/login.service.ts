@@ -28,13 +28,5 @@ export class LoginService {
     return this.loggedo$.asObservable();
   }
  
-  /*
-  isLoggedIn(): boolean {
-    let personaFromStorage: Persona = JSON.parse(localStorage.getItem('persona') || '{}');
-    if(personaFromStorage.token) {
-      return true; // si hay un token, está loggeado
-    }
-    return false; //no está loggeado
-  }
-  */  
+  
 }
