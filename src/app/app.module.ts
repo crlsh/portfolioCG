@@ -8,12 +8,15 @@ import { SocialLinkComponent } from './portfolio/components/social-link/social-l
 import { FooterComponent } from './portfolio/footer/footer.component';
 import { HomeComponent } from './portfolio/home/home.component';
 import { PagErrorComponent } from './portfolio/pag-error/pag-error.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IniciarSesionComponent } from './portfolio/nav-bar/iniciar-sesion/iniciar-sesion.component';
 import { InterceptorService } from './services/api-rest/interceptor.service';
 import { ControlModule } from './portfolio/components/control/control.module';
 import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
 import { NgxLoadingModule } from 'ngx-loading';
+import { ContactFormComponent } from './borrar/contact-form/contact-form.component';
+
+import { ContactoComponent } from './portfolio/contacto/contacto.component';
 
 
 
@@ -28,6 +31,8 @@ import { NgxLoadingModule } from 'ngx-loading';
     PagErrorComponent,
     IniciarSesionComponent,
     LoginButtonsComponent,
+ 
+    ContactoComponent,
   ],
 
 
@@ -36,17 +41,24 @@ import { NgxLoadingModule } from 'ngx-loading';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     NgxLoadingModule.forRoot({}),
     //modulos
     ControlModule
   ],
 
 
-  providers: [{
+  providers: [
+    
+  
+    {
     provide: HTTP_INTERCEPTORS,
     useClass: InterceptorService,
     multi: true
-  }],
+  }
+
+
+],
   bootstrap: [AppComponent],
 
 })

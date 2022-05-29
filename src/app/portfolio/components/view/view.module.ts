@@ -11,6 +11,7 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
 
 
 
+
 @NgModule({
   declarations: [
     SkillsViewComponent,
@@ -19,6 +20,8 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
     ProyectosViewComponent,
     AboutViewComponent,
     BannerViewComponent,
+  
+    
 
   ],
   imports: [
@@ -34,6 +37,7 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
     EducacionViewComponent,
     ProyectosViewComponent,
     AboutViewComponent,
+  
   ],
 })
 export class ViewModule { }
