@@ -7,10 +7,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ExperienciaViewComponent implements OnInit {
 
-  titulo: string = 'Experiencia';
+ ;
   @Input() data?: any
   @Input() $estado: any
   @Output() newItemEvent = new EventEmitter<any>();
+  titulo: string = 'Experiencia'
+  logo_exp:string="https://i.ibb.co/HVJmFzr/job-logo.png"
 
   msgBack(op: string, item: any) {
     let value = {
@@ -19,6 +21,8 @@ export class ExperienciaViewComponent implements OnInit {
     }
     this.newItemEvent.emit(value);
   }
+
+  pictNotLoading(event:any) { event.target.src = this.logo_exp; }
 
   constructor() { }
   msg: any

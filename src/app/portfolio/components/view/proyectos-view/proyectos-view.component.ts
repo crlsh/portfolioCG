@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ProyectosViewComponent implements OnInit {
 
- 
+   logo_proyecto:string='https://i.ibb.co/PGY3L58/logo-proyecto.png'
   titulo: string = 'Proyectos';
   @Input() data?: any
   @Input() $estado: any
@@ -20,6 +20,8 @@ export class ProyectosViewComponent implements OnInit {
     }
     this.newItemEvent.emit(value);
   }
+
+  pictNotLoading(event:any) { event.target.src = this.logo_proyecto; }
 
   constructor() { }
   msg: any

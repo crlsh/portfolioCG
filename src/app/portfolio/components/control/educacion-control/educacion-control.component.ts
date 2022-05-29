@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Educacion } from 'src/app/models/Educacion';
 import { LoginService } from 'src/app/services/api-rest/login.service';
 import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
 import { EducacionFormComponent } from '../../forms/educacion-form/educacion-form.component';
@@ -26,7 +27,7 @@ import { EducacionFormComponent } from '../../forms/educacion-form/educacion-for
 export class EducacionControlComponent implements OnInit {
 
  
-  data!: [];
+  data!: any;
   $estado!: boolean;
   componente: string = 'educacion'
 

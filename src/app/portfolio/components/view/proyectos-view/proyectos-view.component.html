@@ -7,17 +7,16 @@
                 <div class="sbsc cdsbs ">
 
                     <div class="left h4 text-center  title" style="vertical-align: middle;">
-                         Proyectos
-        
+                        Proyectos
+
                     </div>
-                    <app-btn-agregar class="right " 
-                                     *ngIf="$estado" (click)="msgBack('Agregar',[])"
-                                     class="d-flex align-items-center ">
+                    <app-btn-agregar class="right " *ngIf="$estado" (click)="msgBack('Agregar',[])"
+                        class="d-flex align-items-center ">
                     </app-btn-agregar>
                 </div>
 
 
-     
+
 
                 <div class="content">
                     <div class="container">
@@ -25,7 +24,10 @@
                             <div class="col-xs-12 col-sm-4" *ngFor="let item of data">
                                 <div class="card">
                                     <a class="img-fluid" alt="100%x280" href={{item.url_proyecto}}>
-                                        <img class="img-fluid" alt="100%x280" [src]="item.url_imagen">
+    <!-- SI LA IMAGEN NULL O ERROR CARGA PREDETERMINADA -->
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="{{ item.url_imagen ? item.url_imagen : this.logo_proyecto }}"
+                                            (error)="pictNotLoading($event)" />
                                     </a>
 
                                     <div class="card-content">
@@ -33,7 +35,7 @@
 
                                             <div class="sbs">
                                                 <span>
-                                                    {{item.nombre}}
+                                                    {{item.nombre || 'sin datos'}}
                                                 </span>
                                                 <app-btn-editar class="right" *ngIf="$estado"
                                                     (click)="msgBack('Editar',item)" class="d-flex align-items-center">
@@ -44,7 +46,7 @@
                                             </div>
                                         </h4>
                                         <p class="">
-                                            {{item.descripcion}}
+                                            {{item.descripcion || 'sin datos'}}
                                         </p>
                                     </div>
                                     <div class="card-read-more">
