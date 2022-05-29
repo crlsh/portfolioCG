@@ -14,7 +14,7 @@ import { InterceptorService } from './services/api-rest/interceptor.service';
 import { ControlModule } from './portfolio/components/control/control.module';
 import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
 import { NgxLoadingModule } from 'ngx-loading';
-import { ContactFormComponent } from './borrar/contact-form/contact-form.component';
+
 
 import { ContactoComponent } from './portfolio/contacto/contacto.component';
 
