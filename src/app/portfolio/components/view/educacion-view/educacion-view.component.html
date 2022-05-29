@@ -2,11 +2,16 @@
 <div class="section" id="educacion">
     <div class="container cc-education">
   
-        <div class="sbsc">
-            <div class="left h4 text-center mb-4 title">Educacion
+        <div class="sbsc cdsbs ">
+
+            <div class="left h4 text-center  title" style="vertical-align: middle;">
+                Educacion
+
             </div>
-            <app-btn-agregar class="right" *ngIf="$estado" (click)="msgBack('Agregar',[])"
-                class="d-flex align-items-center"></app-btn-agregar>
+            <app-btn-agregar class="right " 
+                             *ngIf="$estado" (click)="msgBack('Agregar',[])"
+                             class="d-flex align-items-center ">
+            </app-btn-agregar>
         </div>
 
             <div class="card"  *ngFor="let item of data">
@@ -19,7 +24,7 @@
                     </div>
                     <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                         <div class="card-body">
-                            <div class="sbs">
+                            <div class="sbsc cdsbs "> 
                                 <div class="h5 mt-0 title">{{item.titulo}}</div>
                                 <!-- <span class=" left progress-badge">{{item.nombre}}</span> -->
                                 <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)"

@@ -3,9 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-btn-agregar',
   template: `
-<button type="button" class="btn btn-outline-primary">
-  <i class="bi bi-file-earmark-plus"></i>
+
+<button class="btn btn-danger btn-icon  btn-icon-mini btn-round" >
+	<i class="fa fa-plus"></i>
 </button>
+
+
 
               `,
 

@@ -25,7 +25,7 @@ import { AboutFormComponent } from '../../forms/about-form/about-form.component'
 
   
 
-  <!-- <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading> -->
+ 
 
   <ngx-loading [show]="loading" [config]="{ fullScreenBackdrop: true }"></ngx-loading>
   

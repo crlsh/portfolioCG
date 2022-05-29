@@ -3,22 +3,51 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
 /* CLASES PARA UBICAR BOTONES Y HEADERS EN LA MISMA LINEA */
-/* side by side (sbs) y side by side centered (sbsc) */
-/* left y right son las ubicaciones del elemento */
+/* side by side (sbs) y side by side centered horizontal (sbsc) */
+/* left y right son las ubicaciones de cada elemento */
 
 .sbsc {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  .sbs {
-    display: flex;
-    position: relative;
-  }
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+
+}
+
+.sbs {
+  display: flex;
+  position: relative;
+}
+
 .left {
-    text-align: left;
-  }
+  text-align: left;
+
+}
+
 .right {
-    position: left;
- 
-  }
+  position: left;
+
+}
+
+
+/*  c_enter (2) d_ivs (content vertically )  s_ide b_y s_ide */
+
+.cdsbs {
+
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* same pero sin centrar */
+
+.dsbs {
+
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}

@@ -1,11 +1,20 @@
 <div class="section" id="experiencia">
+
+
+
     <div class="container py-2 cc-experience">
-        <div class="sbsc">
-            <div class="left h4 text-center mb-4 title">Experiencia Laboral
+
+        <!-- ver clases en styles.css , centran dos divs y su contenido lado a lado v y h -->
+        <div class="sbsc cdsbs ">
+
+            <div class="left h4 text-center  title" style="vertical-align: middle;">
+                Experiencia Laboral
 
             </div>
-            <app-btn-agregar class="right" *ngIf="$estado" (click)="msgBack('Agregar',[])"
-                class="d-flex align-items-center"></app-btn-agregar>
+            <app-btn-agregar class="right " 
+                             *ngIf="$estado" (click)="msgBack('Agregar',[])"
+                             class="d-flex align-items-center ">
+            </app-btn-agregar>
         </div>
 
         <div class="row">
@@ -18,6 +27,7 @@
                         <div class="row">
                             <div class="col-lg-6 ">
                                 <!-- titulo y botones editar / borrar item -->
+
                                 <div class="sbs">
                                     <div class="h5 mt-0 title">{{item.empresa}}</div>
                                     <!-- <span class=" left progress-badge">{{item.nombre}}</span> -->

@@ -1,17 +1,24 @@
 <div class="section" id="proyectos">
-    <div class="container ">
- 
+    <div class="container py-2 cc-experience">
+
 
         <section class="wrapper">
             <div class="container-fostrap">
-                <div class="sbsc">
-                    <div class="left h4 text-center mb-4 title">Proyectos
+                <div class="sbsc cdsbs ">
+
+                    <div class="left h4 text-center  title" style="vertical-align: middle;">
+                         Proyectos
         
                     </div>
-                    <app-btn-agregar class="right" *ngIf="$estado" (click)="msgBack('Agregar',[])"
-                        class="d-flex align-items-center"></app-btn-agregar>
+                    <app-btn-agregar class="right " 
+                                     *ngIf="$estado" (click)="msgBack('Agregar',[])"
+                                     class="d-flex align-items-center ">
+                    </app-btn-agregar>
                 </div>
-                
+
+
+     
+
                 <div class="content">
                     <div class="container">
                         <div class="row">
@@ -19,21 +26,25 @@
                                 <div class="card">
                                     <a class="img-fluid" alt="100%x280" href={{item.url_proyecto}}>
                                         <img class="img-fluid" alt="100%x280" [src]="item.url_imagen">
-                                  </a>
-                                  
+                                    </a>
+
                                     <div class="card-content">
                                         <h4 class="card-title">
-                                     
-                                          <div class="sbs">
-                                            <span  > 
-                                                {{item.nombre}}
-                                          </span>
-                                            <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)" class="d-flex align-items-center"></app-btn-editar>
-                                            <app-btn-eliminar class="right"*ngIf="$estado" (click)="msgBack('Eliminar',item)" class="d-flex align-items-center"></app-btn-eliminar>
+
+                                            <div class="sbs">
+                                                <span>
+                                                    {{item.nombre}}
+                                                </span>
+                                                <app-btn-editar class="right" *ngIf="$estado"
+                                                    (click)="msgBack('Editar',item)" class="d-flex align-items-center">
+                                                </app-btn-editar>
+                                                <app-btn-eliminar class="right" *ngIf="$estado"
+                                                    (click)="msgBack('Eliminar',item)"
+                                                    class="d-flex align-items-center"></app-btn-eliminar>
                                             </div>
                                         </h4>
                                         <p class="">
-                                        {{item.descripcion}}
+                                            {{item.descripcion}}
                                         </p>
                                     </div>
                                     <div class="card-read-more">

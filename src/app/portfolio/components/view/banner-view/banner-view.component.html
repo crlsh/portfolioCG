@@ -14,7 +14,7 @@
 
                     <!-- IMAGEN PERSONAL -->
                     <div class="content-center">
-                        <div class="profile-image">
+                        <div class="profile-image image-raided circle ">
                             <a href="#">
                                 <img [src]="persona?.url_img_perfil" alt="Image" />
                             </a>
@@ -23,7 +23,7 @@
 
                         <!-- NOMBRE TITULO INTRO -->
 
-                        <div class="sbsc">
+                        <div class="sbsc cdsbs "> 
                             <h2>{{persona?.nombre}} {{persona?.apellido}} </h2>
                             <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Banner',persona)"
                                 class="d-flex align-items-center"></app-btn-editar>
