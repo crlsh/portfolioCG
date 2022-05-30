@@ -33,32 +33,41 @@
 
                             </div>
                             <div class="col-lg-6">
-                                <!-- titulo y botones editar / borrar item -->
+                      
 
-                                <div class="sbs">
-                                    <div class="h5 mt-0 title">{{item.empresa || 'sin datos'}}</div>
-
-                                    <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)"
-                                        class="d-flex align-items-center"></app-btn-editar>
-                                    <app-btn-eliminar class="right" *ngIf="$estado" (click)="msgBack('Eliminar',item)"
-                                        class="d-flex align-items-center"></app-btn-eliminar>
-                                </div>
+       
 
 
-                                <div class="h6 mt-0 title">{{item.puesto || 'sin datos'}} ({{item.ingreso|| 'sin
-                                    datos'}}{{item.egreso|| 'sin datos'}})</div>
-                                <p align="justify">{{item.descripcion || 'sin datos'}}</p>
+                         
+                            
 
                                 <ul>
-                                    <li class="list">Core Functionality</li>
+
+                                    <!-- titulo y botones editar / borrar item -->
+                                    <li class="list">                         <div class="sbs">
+                                        <div class="h5 mt-0 title">Empresa: {{item.empresa || 'sin datos'}}</div>
+    
+                                        <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)"
+                                            class="d-flex align-items-center"></app-btn-editar>
+                                        <app-btn-eliminar class="right" *ngIf="$estado" (click)="msgBack('Eliminar',item)"
+                                            class="d-flex align-items-center"></app-btn-eliminar>
+                                    </div></li>
+                                  
                                     <ul>
-                                        <li class="non_list">Software Development</li>
-                                        <li class="non_list">Application Development</li>
+                                        <li class="non_list"><p align="justify">Puesto: {{item.puesto || 'sin datos'}}</p></li>
+                                        <li class="non_list"> <b>Periodo: 
+                                            {{item.ingreso ? (item.ingreso | date:'yyyy' ) : 'Sin Datos'}} - 
+                                 
+                                            {{item.egreso ? (item.egreso | date:'yyyy' ) : 'Sin Datos'}}
+                                        </b>
+                                        </li>
                                     </ul>
-                                    <li class="list">Technologies and Language</li>
+                                  
                                     <ul>
                                         <div class="row">
-                                            <div class="col-md-6">
+                                            <li class="list">Descripcion
+                                            <p align="justify">{{item.descripcion || 'sin datos'}}</p>
+                                            <!-- <div class="col-md-6">
                                                 <li class="non_list">Agile</li>
                                                 <li class="non_list">Autosys</li>
                                                 <li class="non_list">jenkins</li>
@@ -70,7 +79,7 @@
                                                 <li class="non_list">Java</li>
                                                 <li class="non_list">DB2</li>
                                                 <li class="non_list">Shel-Script</li>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </ul>
                                 </ul>

@@ -162,6 +162,9 @@ export class AboutControlComponent implements OnInit {
         this.ngOnInit();
       });
 
+
+// METODOS DESHABILITADOS HASTA IMPLEMENTAR REGISTRO DE NUEVOS USUARIOS
+
     // getAll(): void {
     //   this.servicioDatosService.getAll(this.componente).subscribe(
     //     datos => {
