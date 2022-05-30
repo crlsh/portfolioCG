@@ -124,15 +124,18 @@ export class RedesViewComponent implements OnInit {
       case 'Linkedin': { return 'fa fa-linkedin' };break;
       case 'Github': { return 'fa fa-github' };break;
       case 'Twitter': { return 'fa fa-twitter' };break;
-      case 'Pinterest': { return 'fa fa-twitter' };break;
+      case 'Pinterest': { return 'fa fa-pinterest' };break;
+     
     
   
       default: { 
-         return 'fa fa-facebook'
+         return 'fa fa-circle-user'
          break; 
       } 
    } 
   }
+
+  
 
   // CRUD OPERATIONS
   getAll(): void {
