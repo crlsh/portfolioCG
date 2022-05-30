@@ -21,7 +21,7 @@
                                 <a href="#">
                                     <!-- SI LA IMAGEN NULL O ERROR CARGA PREDETERMINADA -->
                                     <img class="img-fluid" alt="100%x280"
-                                        src="{{ item.url_logo_inst ? this.logo_edu : this.logo_edu }}" alt="Image"
+                                        src="{{ item.url_logo_inst ? item.url_logo_inst : this.logo_edu }}" alt="Image"
                                         (error)="pictNotLoading($event)" />
 
                                 </a>
@@ -56,12 +56,11 @@
                                 </b> </li>
                             <li> <b>Sitio Institucion:</b>
                                 <p>
-                                    <a 
-                                    href={{item.url_institucion}} target="item.url_red">
-                                    {{item.institucion || 'click'}}
+                                    <a href={{item.url_institucion}} target="item.url_red">
+                                        {{item.institucion || 'click'}}
                                     </a>
 
-                                    
+
 
 
 
