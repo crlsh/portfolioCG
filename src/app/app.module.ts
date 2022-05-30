@@ -14,6 +14,7 @@ import { ControlModule } from './portfolio/components/control/control.module';
 import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
 import { NgxLoadingModule } from 'ngx-loading';
 import { ContactoComponent } from './portfolio/contacto/contacto.component';
+import { RedesModule } from './portfolio/redes/redes.module';
 
 
 
@@ -44,6 +45,7 @@ import { ContactoComponent } from './portfolio/contacto/contacto.component';
     NgxLoadingModule.forRoot({}),
     //modulos
     ControlModule,
+    RedesModule
 
   ],
 
