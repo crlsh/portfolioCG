@@ -4,7 +4,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './portfolio/nav-bar/nav/nav.component';
-import { SocialLinkComponent } from './portfolio/components/social-link/social-link.component';
 import { FooterComponent } from './portfolio/footer/footer.component';
 import { HomeComponent } from './portfolio/home/home.component';
 import { PagErrorComponent } from './portfolio/pag-error/pag-error.component';
@@ -14,9 +13,8 @@ import { InterceptorService } from './services/api-rest/interceptor.service';
 import { ControlModule } from './portfolio/components/control/control.module';
 import { LoginButtonsComponent } from './portfolio/nav-bar/login-buttons/login-buttons.component';
 import { NgxLoadingModule } from 'ngx-loading';
-
-
 import { ContactoComponent } from './portfolio/contacto/contacto.component';
+
 
 
 
@@ -25,7 +23,7 @@ import { ContactoComponent } from './portfolio/contacto/contacto.component';
   declarations: [
     AppComponent,
     NavComponent,
-    SocialLinkComponent,
+ 
     FooterComponent,
     HomeComponent,
     PagErrorComponent,
@@ -33,6 +31,7 @@ import { ContactoComponent } from './portfolio/contacto/contacto.component';
     LoginButtonsComponent,
  
     ContactoComponent,
+
   ],
 
 
@@ -44,7 +43,8 @@ import { ContactoComponent } from './portfolio/contacto/contacto.component';
     FormsModule,
     NgxLoadingModule.forRoot({}),
     //modulos
-    ControlModule
+    ControlModule,
+
   ],
 
 

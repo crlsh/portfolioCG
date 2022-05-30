@@ -7,6 +7,9 @@ import { EducacionViewComponent } from './educacion-view/educacion-view.componen
 import { ProyectosViewComponent } from './proyectos-view/proyectos-view.component';
 import { AboutViewComponent } from './about-view/about-view.component';
 import { BannerViewComponent } from './banner-view/banner-view.component';
+import { RedesModule } from '../../redes/redes.module';
+
+
 
 
 
@@ -20,6 +23,7 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
     ProyectosViewComponent,
     AboutViewComponent,
     BannerViewComponent,
+
   
     
 
@@ -27,6 +31,8 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
   imports: [
     CommonModule, 
     SharedModule,
+  RedesModule,
+ 
   ],
   exports: [
 
@@ -37,7 +43,7 @@ import { BannerViewComponent } from './banner-view/banner-view.component';
     EducacionViewComponent,
     ProyectosViewComponent,
     AboutViewComponent,
-  
+ 
   ],
 })
 export class ViewModule { }

@@ -11,6 +11,7 @@ import { NgxLoadingModule } from 'ngx-loading';
 
 
 
+
 @NgModule({
   declarations: [
     SkillsControlComponent,
@@ -18,6 +19,7 @@ import { NgxLoadingModule } from 'ngx-loading';
   EducacionControlComponent,
   ProyectosControlComponent,
   AboutControlComponent,
+ 
   
   ],
   
@@ -33,7 +35,8 @@ import { NgxLoadingModule } from 'ngx-loading';
     ExperienciaControlComponent,
     EducacionControlComponent,
     ProyectosControlComponent,
-    AboutControlComponent
+    AboutControlComponent,
+
   ],
 })
 export class ControlModule { }
