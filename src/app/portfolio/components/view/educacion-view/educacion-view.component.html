@@ -20,7 +20,8 @@
                             <div>
                                 <a href="#">
                                     <!-- SI LA IMAGEN NULL O ERROR CARGA PREDETERMINADA -->
-                                    <img class="img-fluid" alt="100%x280"
+                                    <img class="img-fluid" 
+                                    style=" max-width: 500px; width: 40%; height: auto;"
                                         src="{{ item.url_logo_inst ? item.url_logo_inst : this.logo_edu }}" alt="Image"
                                         (error)="pictNotLoading($event)" />
 
