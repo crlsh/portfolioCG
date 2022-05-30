@@ -54,7 +54,7 @@ export class ServicioDatosService {
   };
 
 
-  /** GET item por id. con 404 si no se encuentra */
+  //  GET item por id. con 404 si no se encuentra 
   getItem(componente: string, id: number): Observable<any> {
     let urla: string = `${this.urlApi}/${componente}`;
     let urlb = `${urla}/${id}`;

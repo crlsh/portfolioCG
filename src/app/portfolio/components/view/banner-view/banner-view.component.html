@@ -1,14 +1,13 @@
 <div class='profile-page' id='inicio'>
     <div class="wrapper">
-
         <div class="page-header page-header-small">
 
-
             <!-- IMAGEN DE FONDO -->
-            <div class="page-header-image" data-parallax="true"
+            <div class="page-header-image" 
                 style="background-image: url('https://i.ibb.co/6ZKzBHb/banner-keyboard.png');">
-
             </div>
+
+            <!-- BANNER - INFO PERSONAL -->
 
             <div class="container">
 
@@ -25,17 +24,24 @@
 
                     <div class="sbsc cdsbs ">
                         <h2>{{persona?.nombre}} {{persona?.apellido}} </h2>
-                        <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Banner',persona)">
+                        <app-btn-editar class="right" *ngIf="$estado"
+                         (click)="msgBack('Banner',persona)">
                         </app-btn-editar>
                     </div>
 
 
-                    <p class="category text-white">{{persona?.titulo}}</p>
-                    <a class="btn btn-primary smooth-scroll mr-2" href="#contacto" data-aos="zoom-in"
-                        data-aos-anchor="data-aos-anchor">CONTACTO</a>
+                    <p class="category text-white">
+                        {{persona?.titulo}}
+                    </p>
+                    <a class="btn btn-primary smooth-scroll mr-2" 
+                    href="#contacto" data-aos="zoom-in"
+                        data-aos-anchor="data-aos-anchor">CONTACTO
+                    </a>
                     <!-- link a mail google drive -->
-                    <a class="btn btn-primary" href="#contacto" data-aos="zoom-in"
-                        data-aos-anchor="data-aos-anchor">CV</a>
+                    <a class="btn btn-primary" href="#contacto" 
+                        data-aos="zoom-in"
+                        data-aos-anchor="data-aos-anchor">CV
+                    </a>
 
 
                 </div>

@@ -1,18 +1,17 @@
 
-        <div class="button-container"  >
-            
+  <div class="button-container"  >         
+            <a class="btn btn-primary btn-round btn-lg btn-icon"
+             *ngFor="let item of data"
 
-            <a class="btn btn-primary btn-round btn-lg btn-icon" *ngFor="let item of data"
-            
             href= {{item.url_red}} target="item.url_red"
             rel="tooltip" title="Follow me on {{item.nombre}}">
-                <i  [ngClass]="selectIcon(item.nombre)"></i>
+                <i  [ngClass]="selectIcon(item.nombre)">
+                </i>
                 
             </a>
-
-            
+  </div>     
      
-        </div>
+     
 
 
 
