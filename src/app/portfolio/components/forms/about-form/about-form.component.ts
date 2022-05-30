@@ -25,7 +25,7 @@ export class AboutFormComponent implements OnInit {
 
   ngOnInit(): void {
     {
-      console.log("on init form", this.fromParent);
+      // console.log("on init form", this.fromParent);
       this.titulo = this.fromParent.modo
       this.item = this.fromParent.item;
       this.item.op = 'Editar'; //unica operacion permitida por el momento
@@ -40,7 +40,7 @@ export class AboutFormComponent implements OnInit {
 
   configureForm(titulo: string, item: any) {
 
-    console.log("configure form", titulo, item), (titulo !=='agregar');
+    // console.log("configure form", titulo, item), (titulo !=='agregar');
 
   
 
@@ -87,7 +87,7 @@ export class AboutFormComponent implements OnInit {
    
  };
 
- console.log("closemodal", value)
+//  console.log("closemodal", value)
  this.activeModal.close(value);
 
 }

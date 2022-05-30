@@ -53,17 +53,18 @@
 
                                     <!-- PUESTO FECHAS DESCRIPCOIN -->
                                     <ul>
-                                        <li class="non_list">
-                                            <p align="justify">Puesto: {{item.puesto || 'sin datos'}}</p>
+                                        <li class="non_list"> <b>Puesto</b>:
+                                            <p align="justify">{{item.puesto || 'sin datos'}}</p>
                                         </li>
-                                        <li class="non_list"> <b>Periodo:
-                                                {{item.ingreso ? (item.ingreso | date:'yyyy' ) : 'Sin Datos'}} -
+                                        <li class="non_list"> <b>Periodo</b>:
+                                            <p> <b> {{item.ingreso ? (item.ingreso | date:'yyyy' ) : 'Sin Datos'}} -
 
-                                                {{item.egreso ? (item.egreso | date:'yyyy' ) : 'Sin Datos'}}
-                                            </b>
+                                                    {{item.egreso ? (item.egreso | date:'yyyy' ) : 'Sin Datos'}}
+                                                </b>
+                                            </p>
                                         </li>
 
-                                        <li class="non_list">Descripcion
+                                        <li class="non_list"> <b>Descripcion</b>:
                                             <p align="justify">{{item.descripcion || 'sin datos'}}</p>
                                         </li>
                                     </ul>

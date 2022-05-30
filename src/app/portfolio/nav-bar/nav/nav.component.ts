@@ -2,8 +2,8 @@ import { Component,  HostListener,  OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutenticationService } from 'src/app/services/api-rest/autentication.service';
 import { LoginService } from 'src/app/services/api-rest/login.service';
-import { RedesService } from 'src/app/services/api-rest/redes.service';
 import { Redes } from 'src/app/models/Redes';
+import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
 
 
 @Component({
@@ -15,14 +15,19 @@ export class NavComponent implements OnInit {
   isScrolled = false;
 
   login!:any;
+  $estado!: boolean;
 
-  socialLinks!: Redes [] 
 
-  constructor(private router: Router, private loginService:LoginService, private autenticationServ: AutenticationService, private redesService: RedesService) { }
+  constructor(private router: Router,
+              private loginService:LoginService, 
+              private autenticationServ: AutenticationService, 
+      
+              private servicioDatosService: ServicioDatosService,
+              ) { }
 
   ngOnInit(): void {
     this.loginService.LogState().subscribe((login) => (this.login = login)); 
-    this.getAll();
+ 
   }
 
   iniciarSesion(){
@@ -40,11 +45,5 @@ export class NavComponent implements OnInit {
       window.pageYOffset >= 80 ? (this.isScrolled = true) : (this.isScrolled = false);
   }
 
-  getAll(){
-    this.redesService.getAll().subscribe((redes) => {
-      this.socialLinks = redes;
-      console.log(redes);
-    });
-  }
-
+ 
 }

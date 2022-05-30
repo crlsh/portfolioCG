@@ -46,9 +46,9 @@ export class ServicioDatosService {
 
 
     let url: string = `${this.urlApi}/${componente}`;
-    console.log("get all service", url)
+    // console.log("get all service", url)
     return this.http.get<[]>(url).pipe(
-      tap(data => console.log(data)),
+      // tap(data => console.log(data)),
       catchError(this.handleError<[]>('getAll', []))
     );
   };
@@ -59,7 +59,7 @@ export class ServicioDatosService {
     let urla: string = `${this.urlApi}/${componente}`;
     let urlb = `${urla}/${id}`;
     return this.http.get<any>(urlb).pipe(
-      tap(data => console.log(data)),
+      // tap(data => console.log(data)),
       catchError(this.handleError<any>(`getItem id=${id}`))
     );
   }
@@ -69,9 +69,9 @@ export class ServicioDatosService {
 
     let urla: string = `${this.urlApi}/${componente}`;
     let urlb = `${urla}/${id}`;
-    console.log("service put", urlb, id)
+    // console.log("service put", urlb, id)
     return this.http.put(urlb, item, this.httpOptions).pipe(
-      tap(_ => console.log(`item id=${item.id}`)),
+      // tap(_ => console.log(`item id=${item.id}`)),
       catchError(this.handleError<any>('updateItem'))
     );
   }
@@ -79,7 +79,7 @@ export class ServicioDatosService {
   deleteItem(componente: string, id: any): Observable<any> {
     let url: string = `${this.urlApi}/${componente}/${id}`;
     // let urlb = `${urla}/${id}`;
-    console.log("delete item from service", url, id)
+    // console.log("delete item from service", url, id)
     return this.http.delete<any>(url, this.httpOptions)
   }
 
@@ -89,7 +89,7 @@ export class ServicioDatosService {
 
     // persona seteada en uno hasta implementar registro de usuarios
     let url: string = `${this.urlApi}/${componente}`;
-    console.log("por enviar a api additem", url, item)
+    // console.log("por enviar a api additem", url, item)
     return this.http.post<any>(url, item, this.httpOptions).pipe(
       tap((newitem: any) => console.log('se agrego nuevo item a', componente)),
       catchError(this.handleError<any>('addItem'))

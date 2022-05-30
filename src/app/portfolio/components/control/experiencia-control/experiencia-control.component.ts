@@ -53,7 +53,7 @@ export class ExperienciaControlComponent implements OnInit {
   }
 
   getMsg(msg: any) {
-    console.log(msg, "from parent");
+    // console.log(msg, "from parent");
      this.openForm(msg.op, msg.item)
   }
 
@@ -78,7 +78,7 @@ export class ExperienciaControlComponent implements OnInit {
       modalRef.componentInstance.fromParent = info;
 
       modalRef.result.then((result) => {
-        console.log("result from control","op", result.op,"item", result.item);
+        // console.log("result from control","op", result.op,"item", result.item);
         this.selectCrudOp(result.op, result.item)
       
         ;
@@ -122,7 +122,7 @@ export class ExperienciaControlComponent implements OnInit {
   getAll(): void {
     this.servicioDatosService.getAll(this.componente).subscribe (
     datos => {this.data = datos;
-  console.log("get all ", this.componente, this.data)
+  // console.log("get all ", this.componente, this.data)
  
     }
   );
@@ -140,7 +140,7 @@ export class ExperienciaControlComponent implements OnInit {
 
 
   deleteItem(componente: string, item: any): void {
-    console.log("delete component", item, item.id_experiencia)
+    // console.log("delete component", item, item.id_experiencia)
     this.servicioDatosService.deleteItem(componente, item.id_experiencia)
     .subscribe 
     (data => { 
@@ -151,7 +151,7 @@ export class ExperienciaControlComponent implements OnInit {
 
   addItem(componente: string, item: any): void {
  
-    console.log("add itemcomponent", item, )
+    // console.log("add itemcomponent", item, )
     this.servicioDatosService.addItem(componente, item) 
     .subscribe
     (data => { 

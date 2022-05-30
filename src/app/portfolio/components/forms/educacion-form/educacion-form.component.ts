@@ -25,7 +25,7 @@ export class EducacionFormComponent implements OnInit {
 
   ngOnInit(): void {
     {
-      console.log("on init form", this.fromParent);
+      // console.log("on init form", this.fromParent);
       this.titulo = this.fromParent.modo
       this.item = this.fromParent.item;
       if(this.item.op === 'Agregar'){ delete this.item.id_educacion}
@@ -40,7 +40,7 @@ export class EducacionFormComponent implements OnInit {
 
   configureForm(titulo: string, item: any) {
 
-    console.log("configure form", titulo, item), (titulo !=='agregar');
+    // console.log("configure form", titulo, item), (titulo !=='agregar');
 
   
 
@@ -79,7 +79,7 @@ export class EducacionFormComponent implements OnInit {
  };
 //  if(value.op === 'Agregar'){ delete value.item.id_skill }
 //    // debe estar vacio para que la genere la api}
- console.log("closemodal", value)
+//  console.log("closemodal", value)
  this.activeModal.close(value);
 
 }

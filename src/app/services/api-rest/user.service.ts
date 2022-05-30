@@ -20,11 +20,11 @@ export class UserService {
   login(username: string, password: string): Observable<any> {  
     this.user.username = username;
     this.user.password = password;
-    console.log("login user", this.user);
+    // console.log("login user", this.user);
     return this.http.post(`https://apiportfolio-cg.herokuapp.com/api/login`, this.user);
     
 	 
-    console.log("login user", this.user);
+    // console.log("login user", this.user);
 	}
 
   

@@ -71,7 +71,7 @@ export class AboutControlComponent implements OnInit {
   }
 
   getMsg(msg: any) {
-    console.log(msg, "from parent");
+    // console.log(msg, "from parent");
     this.openForm(msg.op, msg.item)
   }
 
@@ -96,7 +96,7 @@ export class AboutControlComponent implements OnInit {
       modalRef.componentInstance.fromParent = info;
 
       modalRef.result.then((result) => {
-        console.log("result from control", "op", result.op, "item", result.item);
+        // console.log("result from control", "op", result.op, "item", result.item);
         this.selectCrudOp(result.op, result.item)
 
           ;
@@ -153,7 +153,7 @@ export class AboutControlComponent implements OnInit {
 
 
   updateItem(componente: string, item: any): void {
-    console.log("view sending update" ,componente, item, item.id_persona);
+    // console.log("view sending update" ,componente, item, item.id_persona);
     this.servicioDatosService.updateItem(componente, item, item.id_persona)
     
       .subscribe

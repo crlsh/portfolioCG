@@ -13,6 +13,7 @@ export class ExperienciaViewComponent implements OnInit {
   @Output() newItemEvent = new EventEmitter<any>();
   titulo: string = 'Experiencia'
   logo_exp:string="https://i.ibb.co/HVJmFzr/job-logo.png"
+  
 
   msgBack(op: string, item: any) {
     let value = {

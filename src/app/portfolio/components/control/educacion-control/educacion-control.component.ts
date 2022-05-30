@@ -50,7 +50,7 @@ export class EducacionControlComponent implements OnInit {
   }
 
   getMsg(msg: any) {
-    console.log(msg, "from parent");
+    // console.log(msg, "from parent");
      this.openForm(msg.op, msg.item)
   }
 
@@ -75,7 +75,7 @@ export class EducacionControlComponent implements OnInit {
       modalRef.componentInstance.fromParent = info;
 
       modalRef.result.then((result) => {
-        console.log("result from control","op", result.op,"item", result.item);
+        // console.log("result from control","op", result.op,"item", result.item);
         this.selectCrudOp(result.op, result.item)
       
         ;
@@ -114,7 +114,7 @@ export class EducacionControlComponent implements OnInit {
   getAll(): void {
     this.servicioDatosService.getAll(this.componente).subscribe (
     datos => {this.data = datos;
-  console.log("get all ", this.componente, this.data)
+  // console.log("get all ", this.componente, this.data)
  
     }
   );
@@ -124,7 +124,7 @@ export class EducacionControlComponent implements OnInit {
 
 
   deleteItem(componente: string, item: any): void {
-    console.log("delete component", item, item.id_educacion)
+    // console.log("delete component", item, item.id_educacion)
     this.servicioDatosService.deleteItem(componente, item.id_educacion)
     .subscribe 
     (data => { 
@@ -135,7 +135,7 @@ export class EducacionControlComponent implements OnInit {
 
   addItem(componente: string, item: any): void {
  
-    console.log("add itemcomponent", item, )
+    // console.log("add itemcomponent", item, )
     this.servicioDatosService.addItem(componente, item) 
     .subscribe
     (data => { 

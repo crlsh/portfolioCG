@@ -52,7 +52,7 @@ export class SkillsControlComponent implements OnInit {
   }
 
   getMsg(msg: any) {
-    console.log(msg, "from parent");
+    // console.log(msg, "from parent");
      this.openForm(msg.op, msg.item)
   }
 
@@ -77,7 +77,7 @@ export class SkillsControlComponent implements OnInit {
       modalRef.componentInstance.fromParent = info;
 
       modalRef.result.then((result) => {
-        console.log("result from control","op", result.op,"item", result.item);
+        // console.log("result from control","op", result.op,"item", result.item);
         this.selectCrudOp(result.op, result.item)
       
         ;
@@ -121,7 +121,7 @@ export class SkillsControlComponent implements OnInit {
   getAll(): void {
     this.servicioDatosService.getAll(this.componente).subscribe (
     datos => {this.data = datos;
-  console.log("get all ", this.componente, this.data)
+  // console.log("get all ", this.componente, this.data)
  
     }
   );
@@ -132,7 +132,7 @@ export class SkillsControlComponent implements OnInit {
 
 
   deleteItem(componente: string, item: any): void {
-    console.log("delete component", item, item.id_skill)
+    // console.log("delete component", item, item.id_skill)
     this.servicioDatosService.deleteItem(componente, item.id_skill)
     .subscribe 
     (data => { 
@@ -143,7 +143,7 @@ export class SkillsControlComponent implements OnInit {
 
   addItem(componente: string, item: any): void {
  
-    console.log("add itemcomponent", item, )
+    // console.log("add itemcomponent", item, )
     this.servicioDatosService.addItem(componente, item) 
     .subscribe
     (data => { 

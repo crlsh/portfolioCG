@@ -24,7 +24,7 @@ export class SkillsFormComponent implements OnInit {
 
   ngOnInit(): void {
     {
-      console.log("on init form", this.fromParent);
+      // console.log("on init form", this.fromParent);
       this.titulo = this.fromParent.modo
       this.item = this.fromParent.item;
       // la generacion de nuevas ids es automatica, no hay que pasarla}
@@ -41,7 +41,7 @@ export class SkillsFormComponent implements OnInit {
 
   configureForm(titulo: string, item: any) {
 
-    console.log("configure form", titulo, item), (titulo !=='agregar');
+    // console.log("configure form", titulo, item), (titulo !=='agregar');
 
   
 
@@ -76,7 +76,7 @@ export class SkillsFormComponent implements OnInit {
  };
  if(value.op === 'Agregar'){ delete value.item.id_skill }
    // debe estar vacio para que la genere la api}
- console.log("closemodal", value)
+//  console.log("closemodal", value)
  this.activeModal.close(value);
 
 }

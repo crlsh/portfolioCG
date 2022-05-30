@@ -25,7 +25,7 @@ export class ExperienciaFormComponent implements OnInit {
 
   ngOnInit(): void {
     {
-      console.log("on init form", this.fromParent);
+      // console.log("on init form", this.fromParent);
       this.titulo = this.fromParent.modo
       this.item = this.fromParent.item;
       if(this.item.op === 'Agregar'){ delete this.item.id_experiencia}
@@ -36,7 +36,7 @@ export class ExperienciaFormComponent implements OnInit {
   
   configureForm(titulo: string, item: any) {
 
-    console.log("configure form", titulo, item), (titulo !=='agregar');
+    // console.log("configure form", titulo, item), (titulo !=='agregar');
 
   
 
@@ -74,7 +74,7 @@ export class ExperienciaFormComponent implements OnInit {
    
  };
 
- console.log("closemodal", value)
+//  console.log("closemodal", value)
  this.activeModal.close(value);
 
 }

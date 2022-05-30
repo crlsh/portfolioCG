@@ -17,13 +17,13 @@
                 <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
                     <div class="card-body cc-education-header">
                         <div class="content-center">
-                            <div >
+                            <div>
                                 <a href="#">
-<!-- SI LA IMAGEN NULL O ERROR CARGA PREDETERMINADA -->
+                                    <!-- SI LA IMAGEN NULL O ERROR CARGA PREDETERMINADA -->
                                     <img class="img-fluid" alt="100%x280"
-                                    src="{{ item.url_logo_inst ? this.logo_edu : this.logo_edu }}" alt="Image"
-                                    (error)="pictNotLoading($event)" />
-                          
+                                        src="{{ item.url_logo_inst ? this.logo_edu : this.logo_edu }}" alt="Image"
+                                        (error)="pictNotLoading($event)" />
+
                                 </a>
 
 
@@ -33,27 +33,40 @@
                 </div>
                 <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                     <div class="card-body">
-   
+
 
                         <div class="sbs">
                             <span>
-                                <div class="h5 mt-0 title">{{item.titulo || 'Sin Datos'}}</div>
+                                <div class="h5 mt-0 title">Titulo: {{item.titulo || 'Sin Datos'}}</div>
                             </span>
-                            <app-btn-editar class="right" *ngIf="$estado"
-                                (click)="msgBack('Editar',item)" class="d-flex align-items-center">
+                            <app-btn-editar class="right" *ngIf="$estado" (click)="msgBack('Editar',item)"
+                                class="d-flex align-items-center">
                             </app-btn-editar>
-                            <app-btn-eliminar class="right" *ngIf="$estado"
-                                (click)="msgBack('Eliminar',item)"
+                            <app-btn-eliminar class="right" *ngIf="$estado" (click)="msgBack('Eliminar',item)"
                                 class="d-flex align-items-center"></app-btn-eliminar>
                         </div>
-                        
-                        <h4 class="category">{{item.institucion || 'Sin Datos'}}</h4>
+
+                        <h4 class="category">Insttitucion: {{item.institucion || 'Sin Datos'}}</h4>
                         <ul>
-                            <li> <b>    {{item.ingreso ? (item.ingreso | date:'yyyy' ) : 'Sin Datos'}}
-                                 -
-                                 {{item.egreso ? (item.egreso | date:'yyyy' ) : 'Sin Datos'}}
+                            <li> <b> Periodo:
+                                    <p> {{item.ingreso ? (item.ingreso | date:'yyyy' ) : 'Sin Datos'}}
+                                        -
+                                        {{item.egreso ? (item.egreso | date:'yyyy' ) : 'Sin Datos'}}
+                                    </p>
                                 </b> </li>
-                            <li>{{item.url_institucion|| 'Sin Datos'}}</li>
+                            <li> <b>Sitio Institucion:</b>
+                                <p>
+                                    <a 
+                                    href={{item.url_institucion}} target="item.url_red">
+                                    {{item.institucion || 'click'}}
+                                    </a>
+
+                                    
+
+
+
+                                </p>
+                            </li>
                         </ul>
                     </div>
                 </div>

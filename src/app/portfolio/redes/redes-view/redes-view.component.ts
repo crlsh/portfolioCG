@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Redes } from 'src/app/models/Redes';
 import { LoginService } from 'src/app/services/api-rest/login.service';
 import { ServicioDatosService } from 'src/app/services/servicio-datos.service';
@@ -27,6 +27,7 @@ export class RedesViewComponent implements OnInit {
   data!: Redes[];
   $estado!: boolean;
   componente: string = 'redes'
+
 
   constructor(
     // private modalService: NgbModal,
@@ -113,17 +114,21 @@ export class RedesViewComponent implements OnInit {
   // };
 
 
+
+
+
   selectIcon(nombre:String){
     switch(nombre) { 
-      case 'facebook': { return 'fa fa facebook' };break;
-      case 'instagram': { return 'fa fa-instagram' };break;
-      case 'linkedin': { return 'fa fa-linkedin' };break;
-      case 'github': { return 'fa fa-github' };break;
-      case 'twitter': { return 'fa fa-twitter' };break;
+      case 'Facebook': { return 'fa fa-facebook' };break;
+      case 'Instagram': { return 'fa fa-instagram' };break;
+      case 'Linkedin': { return 'fa fa-linkedin' };break;
+      case 'Github': { return 'fa fa-github' };break;
+      case 'Twitter': { return 'fa fa-twitter' };break;
+      case 'Pinterest': { return 'fa fa-twitter' };break;
     
   
       default: { 
-         return 'fa fa facebook'
+         return 'fa fa-facebook'
          break; 
       } 
    } 
@@ -133,7 +138,7 @@ export class RedesViewComponent implements OnInit {
   getAll(): void {
     this.servicioDatosService.getAll(this.componente).subscribe (
     datos => {this.data = datos;
-  console.log("get all ", this.componente, this.data)
+  // console.log("get all ", this.componente, this.data)
  
     }
   );
