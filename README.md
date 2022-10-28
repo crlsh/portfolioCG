@@ -6,7 +6,9 @@ Este proyecto personal es el trabajo final presentado en la segunda edicion de A
 
 https://portfolio-carlos-gimenez.web.app/
 
+## Link al repositorio del backend
 
+https://github.com/crlsh/portfolioapi
 
 ## Tecnologias empleadas
 
