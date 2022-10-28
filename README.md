@@ -1,7 +1,7 @@
 # Argentina Programa : Proyecto Integrador 
 
 Este proyecto es el trabajo final presentado en la segunda edicion de Argentina Progarma
-Portfolio personal editable en forma online con login, 
+Portfolio personal editable en forma online con autenticacion y CRUD. 
 los datos se almacenan via api en una base mysql online.
 
 ## Direccion de la app
