@@ -18,6 +18,8 @@ API:  Java Springboot alojada en heroku
 
 Frontend:  Angular 13 alojado en firebase
 
+Autenticacion : jwt
+
 
 ## Screenshot
 
